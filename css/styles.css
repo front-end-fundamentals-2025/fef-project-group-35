@@ -69,9 +69,9 @@ header {
     border: 1px solid #007bff;
     border-radius: 5px;
     color: #007bff;
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: bold;
-    transition: 0.3s;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .btn:hover {
@@ -126,18 +126,20 @@ header {
 
 /* Banner Button */
 .banner-btn {
-    background-color: #007bff;
-    color: white;
+    text-decoration: none;
     padding: 1rem 2rem;
     font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
     border-radius: 5px;
     text-decoration: none;
-    transition: 0.3s;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .banner-btn:hover {
     background-color: white;
-    color: black;
+    color: #007bff;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------- */
@@ -213,3 +215,57 @@ header {
 }
 
 /* ------------------------------------------------------------------------------------------------------------------- */
+
+/* Promo Section */
+.promo-section {
+    display: flex;
+    justify-content: center;
+    padding: 6rem 0;
+}
+
+.promo-container {
+    width: 100%;
+    max-width: 1600px;
+    padding: 10rem 0rem;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('https://img.freepik.com/free-vector/planets-outer-space-with-satellites-meteors-illustration_33099-2352.jpg?t=st=1739166168~exp=1739169768~hmac=72a2506a05823ff33299c765ab7d1aaab7c41d7cf950333008754799e3211ce6&w=1380');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    color: white; 
+    text-align: center;
+}
+
+.promo-text {
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.promo-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.promo-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+/* Promo Button */
+.promo-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.promo-btn:hover {
+    background-color: white;
+    color: #007bff;
+}
