@@ -61,6 +61,14 @@ header {
     gap: 1rem;
 }
 
+.cart-window {
+    background-color: red;
+    position: absolute;
+    top: 5rem;
+    left: 20rem;
+    width: 40rem;
+}
+
 .btn {
     text-decoration: none;
     padding: 0.5rem 1rem;
