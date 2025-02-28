@@ -97,6 +97,7 @@ header {
     width: 600px;
     border-radius: 4px;
     justify-content: right;
+    visibility: hidden;
 }
 
 .cart-item {

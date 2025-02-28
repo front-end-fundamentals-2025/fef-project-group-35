@@ -16,11 +16,15 @@ function addToCart(event) {
     cart.push(product);
     // Save the updated cart back to local storage
     localStorage.setItem('cart', JSON.stringify(cart));
-    // Redirect to cart page
-    window.location.href = 'cart.html';
+   
+    alert(`${productName} has been added to your cart!`);
 }
 // Attach event listeners to all "Add to Cart" buttons
-
 document.querySelectorAll('.add-to-cart-btn').forEach(button => {
     button.addEventListener('click', addToCart);
+});
+
+ // Redirect to cart page when cart icon is clicked
+document.getElementById('cart-icon').addEventListener('click', function(event) {
+    window.location.href = 'cart.html';
 });
