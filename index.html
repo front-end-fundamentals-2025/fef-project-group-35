@@ -1,166 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <header>
-        <nav class="nav-bar">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="E-Commerce Logo">
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-            <div class="user-actions">
-                <a href="login.html" class="btn">Login</a>
-                <a href="#" id="cart-btn" class="btn cart-btn">
-                    Cart
-                    <i class="fa fa-shopping-cart"></i> 
-                </a>
-            </div>
-            <div id="cart-window" class="cart-window">
-                <div id="cart-items"></div>
-            </div>
-        </nav>
-    </header>
-    
-    <section class="banner-section">
-        <img src="https://img.freepik.com/free-photo/futuristic-space-exploration-artwork_1409-6100.jpg?t=st=1739983986~exp=1739987586~hmac=2403b3bc97561a1341d4923a5102b2f48c324b963175cfcf3febc06b5f46a6a6&w=1480" 
-        alt="" class="banner-img">
-        <div class="banner-text">
-            <h1>Welcome To Our Store</h1>
-            <p>Find the best deals on all your favorite games.</p>
-            <a href="products.html" class="btn banner-btn">Shop Now</a>
+      <nav class="nav-bar">
+        <a href="index.html" class="logo">
+          <img src="images/logo.png" alt="E-Commerce Logo" />
+        </a>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="user-actions">
+          <a href="login.html" class="btn">Login</a>
+          <a href="#" id="cart-btn" class="btn cart-btn">
+            Cart
+            <i class="fa fa-shopping-cart"></i>
+          </a>
+        </div>
+        <div id="cart-window" class="cart-window">
+          <div id="cart-items"></div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="banner-section">
+      <img
+        src="https://img.freepik.com/free-photo/futuristic-space-exploration-artwork_1409-6100.jpg?t=st=1739983986~exp=1739987586~hmac=2403b3bc97561a1341d4923a5102b2f48c324b963175cfcf3febc06b5f46a6a6&w=1480"
+        alt=""
+        class="banner-img"
+      />
+      <div class="banner-text">
+        <h1>Welcome To Our Store</h1>
+        <p>Find the best deals on all your favorite games.</p>
+        <a href="products.html" class="btn banner-btn">Shop Now</a>
+      </div>
     </section>
 
     <section class="products-section">
-        <h1>FEATURED PRODUCTS</h1>
-        <div class="products-grid">
-            <div class="products-card">
-                <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg" alt="">
-                <p>The Witcher 3</p>
-            </div>
-            <div class="products-card">
-                <img src="https://upload.wikimedia.org/wikipedia/en/e/e7/Helldivers2cover.png" alt="">
-                <p>Helldiver 2</p>
-            </div>
-            <div class="products-card">
-                <img src="https://upload.wikimedia.org/wikipedia/en/b/b6/Ghost_of_Tsushima.jpg" alt="">
-                <p>Ghost of Tsushima</p>
-            </div>
-            <div class="products-card">
-                <img src="https://upload.wikimedia.org/wikipedia/en/a/a6/Black_Myth_Wukong_cover_art.jpg" alt="">
-                <p>Black Myth Wukong</p>
-            </div>
-            <div class="products-card">
-                <img src="https://upload.wikimedia.org/wikipedia/en/b/b9/Elden_Ring_Box_art.jpg" alt="">
-                <p>Elden Ring</p>
-            </div>
+      <h1>FEATURED PRODUCTS</h1>
+      <div class="products-grid">
+        <div class="products-card">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg"
+            alt=""
+          />
+          <p>The Witcher 3</p>
         </div>
-        <a href="products.html" class="btn btn-view-all">View All Products</a>
+        <div class="products-card">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/e/e7/Helldivers2cover.png"
+            alt=""
+          />
+          <p>Helldiver 2</p>
+        </div>
+        <div class="products-card">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/b/b6/Ghost_of_Tsushima.jpg"
+            alt=""
+          />
+          <p>Ghost of Tsushima</p>
+        </div>
+        <div class="products-card">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/a6/Black_Myth_Wukong_cover_art.jpg"
+            alt=""
+          />
+          <p>Black Myth Wukong</p>
+        </div>
+        <div class="products-card">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/b/b9/Elden_Ring_Box_art.jpg"
+            alt=""
+          />
+          <p>Elden Ring</p>
+        </div>
+      </div>
+      <a href="products.html" class="btn btn-view-all">View All Products</a>
     </section>
 
     <section class="promo-section">
-        <div class="promo-container">
-            <div class="promo-text">
-                <h2>Best Savings on <br> New Arrivals</h2>
-                <p>Get the latest products at unbeatable prices. Shop now and save big on all new arrivals!</p>
-                <a href="products.html" class="btn promo-btn">Shop Now</a>
-            </div>
+      <div class="promo-container">
+        <div class="promo-text">
+          <h2>
+            Best Savings on <br />
+            New Arrivals
+          </h2>
+          <p>
+            Get the latest products at unbeatable prices. Shop now and save big
+            on all new arrivals!
+          </p>
+          <a href="products.html" class="btn promo-btn">Shop Now</a>
         </div>
+      </div>
     </section>
 
     <section class="benefits-section">
-        <h2>Why Buy Games From Us?</h2>
-        <div class="benefits-grid">
-            <div class="benefits-card">
-                <i class="fas fa-check-circle"></i>
-                <h3>100% Authentic Games</h3>
-                <p>All our games are original and sourced from verified publishers.</p>
-            </div>
-            <div class="benefits-card">
-                <i class="fas fa-tags"></i>
-                <h3>Best Prices</h3>
-                <p>We offer competitive prices and exclusive discounts.</p>
-            </div>
-            <div class="benefits-card">
-                <i class="fas fa-truck"></i>
-                <h3>Fast & Secure Delivery</h3>
-                <p>Get your games delivered quickly and securely to your doorstep.</p>
-            </div>
-            <div class="benefits-card">
-                <i class="fas fa-headset"></i>
-                <h3>24/7 Customer Support</h3>
-                <p>Our support team is available anytime to assist you.</p>
-            </div>
+      <h2>Why Buy Games From Us?</h2>
+      <div class="benefits-grid">
+        <div class="benefits-card">
+          <i class="fas fa-check-circle"></i>
+          <h3>100% Authentic Games</h3>
+          <p>
+            All our games are original and sourced from verified publishers.
+          </p>
         </div>
+        <div class="benefits-card">
+          <i class="fas fa-tags"></i>
+          <h3>Best Prices</h3>
+          <p>We offer competitive prices and exclusive discounts.</p>
+        </div>
+        <div class="benefits-card">
+          <i class="fas fa-truck"></i>
+          <h3>Fast & Secure Delivery</h3>
+          <p>Get your games delivered quickly and securely to your doorstep.</p>
+        </div>
+        <div class="benefits-card">
+          <i class="fas fa-headset"></i>
+          <h3>24/7 Customer Support</h3>
+          <p>Our support team is available anytime to assist you.</p>
+        </div>
+      </div>
     </section>
 
     <section class="contact-section" id="contact">
-        <h2>Contact Us</h2>
-        <p>Have questions? Reach out to us, and we’ll get back to you as soon as possible.</p>
-        <form action="#" method="">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Send Message</button>
-        </form>
+      <h2>Contact Us</h2>
+      <p>
+        Have questions? Reach out to us, and we’ll get back to you as soon as
+        possible.
+      </p>
+      <form action="#" method="">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Write your message..."
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
     </section>
 
     <footer class="footer">
-        <div class="footer-container">  
-            <div class="footer-logo">
-                <img src="images/logo.png" alt="E-Commerce Logo">
-                <p>Your go-to store for the best deals on all products!</p>
-            </div>
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h3>Contact Us</h3>
-                <p>Email: support@gmail.com</p>
-                <p>Phone: +123 456 7890</p>
-                <p>Location: ----------- </p>
-            </div>
-            <div class="footer-social">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-x"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="E-Commerce Logo" />
+          <p>Your go-to store for the best deals on all products!</p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 E-Commerce Store. All rights reserved.</p>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
         </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>Email: support@gmail.com</p>
+          <p>Phone: +123 456 7890</p>
+          <p>Location: -----------</p>
+        </div>
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-x"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 E-Commerce Store. All rights reserved.</p>
+      </div>
     </footer>
     <script src="js/script.js"></script>
     <script src="js/popup.js"></script>
-</body>
+  </body>
 </html>
