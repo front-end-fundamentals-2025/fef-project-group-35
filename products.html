@@ -1,201 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Products</title>
-    <link rel="stylesheet" href="css/products.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/products.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <header>
-        <nav class="nav-bar">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="E-Commerce Logo">
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <div class="user-actions">
-                <a href="login.html" class="btn">Login</a>
-                <a href="#" id="cart-btn" class="btn cart-btn" id="cart-icon">
-                    Cart
-                    <i class="fa fa-shopping-cart"></i> 
-                </a>
-            </div>
-            <div id="cart-window" class="cart-window">
-                <div id="cart-items"></div>
-            </div>
-        </nav>
+      <nav class="nav-bar">
+        <a href="index.html" class="logo">
+          <img src="images/logo.png" alt="E-Commerce Logo" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="user-actions">
+          <a href="login.html" class="btn">Login</a>
+          <a href="#" id="cart-btn" class="btn cart-btn" id="cart-icon">
+            Cart
+            <i class="fa fa-shopping-cart"></i>
+          </a>
+        </div>
+        <div id="cart-window" class="cart-window">
+          <div id="cart-items"></div>
+        </div>
+      </nav>
     </header>
 
     <section class="product-list">
-        <div class="products-grid">
-            <div class="products-card">
-                <a href="product-detail.html?game=monster-hunter-wilds">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/5/52/Monster_Hunter_Wilds_cover.png" alt="">
-                </a>
-                <p>Monster Hunter Wilds</p>
-                <p>$39.99</p>
-                <div class="product-actions">
-                    <a href="#" class="btn add-to-cart-btn" data-name="Monster Hunter Wilds" data-price="39.99">Add to Cart</a>
-                </div>
-            </div>
-            <div class="products-card">
-                <a href="product-detail.html?game=dynasty-warriors-origins">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Dynasty_Warriors_Origins_Cover_1.jpg" alt="">
-                </a>                
-                <p>Dynasty Warriors: Origins</p>
-                <p>$29.99</p>
-                <div class="product-actions">
-                    <a href="cart.html" class="btn add-to-cart-btn">Add to Cart</a>
-                </div>
-            </div>
-            <div class="products-card">
-                <a href="product-detail.html?game=witcher-3">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg" alt="">
-                </a>
-                <p>The Witcher 3: Wild Hunt</p>
-                <p>$29.99</p>
-                <div class="product-actions">
-                    <a href="cart.html" class="btn add-to-cart-btn">Add to Cart</a>
-                </div>
-            </div>
-            <div class="products-card">
-                <a href="product-detail.html?game=helldivers-2">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/e/e7/Helldivers2cover.png" alt="">
-                </a>
-                <p>Helldivers 2</p>
-                <p>$39.99</p>
-                <div class="product-actions">
-                    <a href="cart.html" class="btn add-to-cart-btn">Add to Cart</a>
-                </div>
-            </div>
-            <div class="products-card">
-                <a href="product-detail.html?game=ghost-of-tsushima">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/b/b6/Ghost_of_Tsushima.jpg" alt="">
-                </a>
-                <p>Ghost of Tsushima</p>
-                <p>$49.99</p>
-                <div class="product-actions">
-                    <a href="cart.html" class="btn add-to-cart-btn">Add to Cart</a>
-                </div>
-            </div>
-            <div class="products-card">
-                <a href="product-detail.html?game=black-myth-wukong">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a6/Black_Myth_Wukong_cover_art.jpg" alt="">
-                </a>
-                <p>Black Myth Wukong</p>
-                <p>$59.99</p>
-                <div class="product-actions">
-                    <a href="cart.html" class="btn add-to-cart-btn">Add to Cart</a>
-                </div>
-            </div>
-            <div class="products-card">
-                <a href="product-detail.html?game=elden-ring">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/b/b9/Elden_Ring_Box_art.jpg" alt="">
-                </a>
-                <p>Elden Ring</p>
-                <p>$59.99</p>
-                <div class="product-actions">
-                    <a href="cart.html" class="btn add-to-cart-btn">Add to Cart</a>
-                </div>
-            </div>
-            <div class="products-card">
-                <a href="product-detail.html?game=god-of-war-ragnarok">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/e/ee/God_of_War_Ragnar%C3%B6k_cover.jpg" alt="">
-                </a>
-                <p>God of War Ragnarök</p>
-                <p>$29.99</p>
-                <div class="product-actions">
-                    <a href="cart.html" class="btn add-to-cart-btn">Add to Cart</a>
-                </div>
-            </div>
-            <div class="products-card">
-                <a href="product-detail.html?game=hogwarts-legacy">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/3/3d/Hogwarts_Legacy_key_art.jpg" alt="">
-                </a>                
-                <p>Hogwarts Legacy</p>
-                <p>$49.99</p>
-                <div class="product-actions">
-                    <a href="cart.html" class="btn add-to-cart-btn">Add to Cart</a>
-                </div>
-            </div>
-            <div class="products-card">
-                <a href="product-detail.html?game=baldurs-gate-3">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/1/12/Baldur%27s_Gate_3_cover_art.jpg" alt="">
-                </a>                
-                <p>Baldur's Gate III</p>
-                <p>$49.99</p>
-                <div class="product-actions">
-                    <a href="cart.html" class="btn add-to-cart-btn">Add to Cart</a>
-                </div>
-            </div>
-            <div class="products-card">
-                <a href="product-detail.html?game=final-fantasy-xvi">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/0/00/Final_Fantasy_XVI_cover_art.png" alt="">
-                </a>                
-                <p>Final Fantasy XVI</p>
-                <p>$39.99</p>
-                <div class="product-actions">
-                    <a href="cart.html" class="btn add-to-cart-btn">Add to Cart</a>
-                </div>
-            </div>
-            <div class="products-card">
-                <a href="product-detail.html?game=dragons-dogma-2">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/c/c7/Dragon%27s_Dogma_2_cover_art.jpg" alt="">
-                </a>                
-                <p>Dragon's Dogma 2</p>
-                <p>$49.99</p>
-                <div class="product-actions">
-                    <a href="cart.html" class="btn add-to-cart-btn">Add to Cart</a>
-                </div>
-            </div>
+      <div class="products-grid">
+        <div class="products-card">
+          <a href="product-detail.html?game=monster-hunter-wilds">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/5/52/Monster_Hunter_Wilds_cover.png"
+              alt=""
+            />
+          </a>
+          <p>Monster Hunter Wilds</p>
+          <p>$39.99</p>
+          <div class="product-actions">
+            <a
+              href="#"
+              class="btn add-to-cart-btn"
+              data-name="Monster Hunter Wilds"
+              data-price="39.99"
+              >Add to Cart</a
+            >
+          </div>
         </div>
+        <div class="products-card">
+          <a href="product-detail.html?game=dynasty-warriors-origins">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/5/55/Dynasty_Warriors_Origins_Cover_1.jpg"
+              alt=""
+            />
+          </a>
+          <p>Dynasty Warriors: Origins</p>
+          <p>$29.99</p>
+          <div class="product-actions">
+            <a href="cart.html" class="btn add-to-cart-btn">Add to Cart</a>
+          </div>
+        </div>
+        <div class="products-card">
+          <a href="product-detail.html?game=witcher-3">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg"
+              alt=""
+            />
+          </a>
+          <p>The Witcher 3: Wild Hunt</p>
+          <p>$29.99</p>
+          <div class="product-actions">
+            <a href="cart.html" class="btn add-to-cart-btn">Add to Cart</a>
+          </div>
+        </div>
+        <div class="products-card">
+          <a href="product-detail.html?game=helldivers-2">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/e/e7/Helldivers2cover.png"
+              alt=""
+            />
+          </a>
+          <p>Helldivers 2</p>
+          <p>$39.99</p>
+          <div class="product-actions">
+            <a href="cart.html" class="btn add-to-cart-btn">Add to Cart</a>
+          </div>
+        </div>
+        <div class="products-card">
+          <a href="product-detail.html?game=ghost-of-tsushima">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/b/b6/Ghost_of_Tsushima.jpg"
+              alt=""
+            />
+          </a>
+          <p>Ghost of Tsushima</p>
+          <p>$49.99</p>
+          <div class="product-actions">
+            <a href="cart.html" class="btn add-to-cart-btn">Add to Cart</a>
+          </div>
+        </div>
+        <div class="products-card">
+          <a href="product-detail.html?game=black-myth-wukong">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/a/a6/Black_Myth_Wukong_cover_art.jpg"
+              alt=""
+            />
+          </a>
+          <p>Black Myth Wukong</p>
+          <p>$59.99</p>
+          <div class="product-actions">
+            <a href="cart.html" class="btn add-to-cart-btn">Add to Cart</a>
+          </div>
+        </div>
+        <div class="products-card">
+          <a href="product-detail.html?game=elden-ring">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/b/b9/Elden_Ring_Box_art.jpg"
+              alt=""
+            />
+          </a>
+          <p>Elden Ring</p>
+          <p>$59.99</p>
+          <div class="product-actions">
+            <a href="cart.html" class="btn add-to-cart-btn">Add to Cart</a>
+          </div>
+        </div>
+        <div class="products-card">
+          <a href="product-detail.html?game=god-of-war-ragnarok">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/e/ee/God_of_War_Ragnar%C3%B6k_cover.jpg"
+              alt=""
+            />
+          </a>
+          <p>God of War Ragnarök</p>
+          <p>$29.99</p>
+          <div class="product-actions">
+            <a href="cart.html" class="btn add-to-cart-btn">Add to Cart</a>
+          </div>
+        </div>
+        <div class="products-card">
+          <a href="product-detail.html?game=hogwarts-legacy">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/3/3d/Hogwarts_Legacy_key_art.jpg"
+              alt=""
+            />
+          </a>
+          <p>Hogwarts Legacy</p>
+          <p>$49.99</p>
+          <div class="product-actions">
+            <a href="cart.html" class="btn add-to-cart-btn">Add to Cart</a>
+          </div>
+        </div>
+        <div class="products-card">
+          <a href="product-detail.html?game=baldurs-gate-3">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/1/12/Baldur%27s_Gate_3_cover_art.jpg"
+              alt=""
+            />
+          </a>
+          <p>Baldur's Gate III</p>
+          <p>$49.99</p>
+          <div class="product-actions">
+            <a href="cart.html" class="btn add-to-cart-btn">Add to Cart</a>
+          </div>
+        </div>
+        <div class="products-card">
+          <a href="product-detail.html?game=final-fantasy-xvi">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/0/00/Final_Fantasy_XVI_cover_art.png"
+              alt=""
+            />
+          </a>
+          <p>Final Fantasy XVI</p>
+          <p>$39.99</p>
+          <div class="product-actions">
+            <a href="cart.html" class="btn add-to-cart-btn">Add to Cart</a>
+          </div>
+        </div>
+        <div class="products-card">
+          <a href="product-detail.html?game=dragons-dogma-2">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/c/c7/Dragon%27s_Dogma_2_cover_art.jpg"
+              alt=""
+            />
+          </a>
+          <p>Dragon's Dogma 2</p>
+          <p>$49.99</p>
+          <div class="product-actions">
+            <a href="cart.html" class="btn add-to-cart-btn">Add to Cart</a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer class="footer">
-        <div class="footer-container">  
-            <div class="footer-logo">
-                <img src="images/logo.png" alt="E-Commerce Logo">
-                <p>Your go-to store for the best deals on all products!</p>
-            </div>
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h3>Contact Us</h3>
-                <p>Email: support@gmail.com</p>
-                <p>Phone: +123 456 7890</p>
-                <p>Location: ----------- </p>
-            </div>
-            <div class="footer-social">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-x"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="E-Commerce Logo" />
+          <p>Your go-to store for the best deals on all products!</p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 E-Commerce Store. All rights reserved.</p>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
         </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>Email: support@gmail.com</p>
+          <p>Phone: +123 456 7890</p>
+          <p>Location: -----------</p>
+        </div>
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-x"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 E-Commerce Store. All rights reserved.</p>
+      </div>
     </footer>
 
     <script src="js/product.js"></script>
     <script src="js/script.js"></script>
     <script src="js/popup.js"></script>
-   
-</body>
+    <script src="js/navbar.js"></script>
+  </body>
 </html>
