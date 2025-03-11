@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
-    <link rel="stylesheet" href="css/cart.css"> 
+    <link rel="stylesheet" href="css/checkout.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> 
     <style>
     </style>
@@ -13,25 +13,38 @@
     <header>
         <nav class="nav-bar">
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="E-Commerce Logo">
+              <img src="images/logo.png" alt="E-Commerce Logo" />
             </a>
+            <div class="menu-toggle" id="mobile-menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="#contact">Contact Us</a></li>
             </ul>
             <div class="user-actions">
-                <a href="login.html" class="btn">Login</a>
-                <a href="#" id="cart-btn" class="btn cart-btn">
-                    Cart
-                    <i class="fa fa-shopping-cart"></i> 
-                </a>
+              <a href="login.html" class="btn">Login</a>
+              <a href="#" id="cart-btn" class="btn cart-btn">
+                Cart
+                <i class="fa fa-shopping-cart"></i>
+              </a>
             </div>
-            <div id="cart-window" class="cart-window">
-                <div id="cart-items"></div>
+                <div id="cart-window" class="cart-window">
+                <div class="cart-header">
+                    <h2>Your Cart</h2>
+                    <button class="close-cart-btn">&times;</button>
+                </div>
+                <div id="cart-items" class="cart-items"></div>
+                <div class="cart-footer">
+                    <p>Total: <span id="cart-total">$0.00</span></p>
+                    <button class="btn checkout-btn" id="checkout-btn">Checkout</button>
+                </div>
             </div>
-        </nav>
+          </nav>
     </header>
 
     <h1>Your Shopping Cart</h1>
@@ -73,9 +86,8 @@
         </div>
     </footer>
 
-
+    <script src="js/navbar.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/popup.js"></script>
 
 
 </body>
