@@ -44,3 +44,22 @@ function deleteItem(event) {
 
 // Call the function to display cart items
 displayCart();
+
+document.addEventListener('DOMContentLoaded', function() {
+    const cartWindow = document.querySelector('.cart-window');
+    const cartBtn = document.querySelector('#cart-btn');
+    const closeCartBtn = document.querySelector('.close-cart-btn');
+    const checkoutBtn = document.querySelector('#checkout-btn');
+
+    function toggleCartWindow() {
+        cartWindow.classList.toggle('open');
+    }
+
+    cartBtn.addEventListener('click', toggleCartWindow);
+    closeCartBtn.addEventListener('click', toggleCartWindow);
+
+    // Redirect to checkout page when checkout button is clicked
+    checkoutBtn.addEventListener('click', function() {
+        window.location.href = 'checkout.html';
+    });
+});
