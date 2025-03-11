@@ -361,6 +361,49 @@ header {
 
 /* ------------------------------------------------------------------------------------------------------------------- */
 
+.infiniti-banner {
+  height: 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #f8f8f8; 
+  border: 1px solid #007bff;
+  overflow: hidden;
+}
+
+.infiniti-text {
+  width: 100%; 
+  white-space: nowrap;
+  position: absolute;
+  font-size: 1.8rem;
+  color: #fff;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #007bff;
+
+}
+
+.infiniti-text span {
+  display: inline-block;
+  padding-left: 100%; 
+  animation: scroll 10s linear infinite; 
+  
+}
+
+.infiniti-text2 span {
+  animation-delay: 5s; 
+}
+
+@keyframes scroll {
+  0% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(-100%, 0);
+  }
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
 /* Promo Section */
 .promo-section {
   display: flex;
