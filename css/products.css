@@ -2,8 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* Navigation Bar */
@@ -34,8 +33,6 @@ header {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
-  align-items: center;
 }
 
 .nav-links li {
@@ -120,6 +117,7 @@ header {
     display: flex;
   }
 }
+
 /* ------------------------------------------------------------------------------------------------------------------- */
 
 /* Cart Popup */
@@ -127,7 +125,7 @@ header {
   position: fixed;
   top: 0;
   right: 0;
-  width: 300px;
+  width: 600px;
   height: 100%;
   background-color: #fff;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
@@ -231,11 +229,18 @@ header {
   color: #777;
 }
 
+.quantity-input {
+  width: 50px;
+  padding: 5px;
+  margin-left: 10px;
+  text-align: center;
+}
+
 /* ------------------------------------------------------------------------------------------------------------------- */
 
 /* Products Section */
 .product-list {
-  background-color: white;
+  background-color: white; 
   color: white;
   text-align: center;
   padding: 6rem 2rem;
@@ -261,7 +266,8 @@ header {
   background: white;
   padding-bottom: 1rem;
   border-radius: 10px;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); 
+  
 }
 
 .products-card a {
