@@ -229,7 +229,7 @@ body.modal-open {
   position: fixed;
   top: 0;
   right: 0;
-  width: 300px;
+  width: 600px;
   height: 100%;
   background-color: #fff;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
@@ -247,7 +247,7 @@ body.modal-open {
 /* Responsive design for cart window */
 @media screen and (max-width: 768px) {
   .cart-window {
-    width: 100%;
+      width: 100%;
   }
 }
 
@@ -266,7 +266,7 @@ body.modal-open {
 
 .close-cart-btn {
   background: none;
-  border: none;
+  border: none; 
   font-size: 1.5em;
   cursor: pointer;
 }
@@ -332,7 +332,12 @@ body.modal-open {
   font-size: 1.2em;
   color: #777;
 }
-
+.quantity-input {
+    width: 50px;
+    padding: 5px;
+    margin-left: 10px;
+    text-align: center;
+}
 /* ------------------------------------------------------------------------------------------------------------------- */
 /* Center section and add spacing */
 .about-us-section {
