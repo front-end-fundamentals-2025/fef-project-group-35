@@ -5,6 +5,33 @@
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
+/* Keyframes for animations */
+@keyframes slideIn {
+  from {
+      transform: translateX(-100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+@keyframes pulse-ping {
+  0% {
+	  opacity: 0.8;
+	  transform: scale(0.2);
+  }
+
+  80% {
+	  opacity: 0;
+	  transform: scale(1.2);
+  }
+
+  100% {
+	  opacity: 0.6;
+	  transform: scale(2);
+  }
+}
+
 /* Navigation Bar */
 header {
     position: fixed;
@@ -240,6 +267,7 @@ header {
     align-items: center;
     padding: 5rem 10rem;
     margin-top: 5rem;
+    animation: slideIn 1s ease-in-out;
 }
 
 .product-container {
@@ -311,7 +339,7 @@ header {
 }
 
 /* Add to cart button */
-.btn {
+.add-to-cart-btn {
     text-decoration: none;
     padding: 0.5rem 1rem;
     border: 1px solid #007bff;
@@ -319,10 +347,10 @@ header {
     color: #007bff;
     font-size: 1.2em;
     font-weight: bold;
-    transition: background-color 0.3s ease-in-out;
+    animation: pulse-ping 2s ease 0s infinite normal none;
 }
 
-.btn:hover {
+.add-to-cart-btn:hover {
     background-color: #007bff;
     color: white;
 }

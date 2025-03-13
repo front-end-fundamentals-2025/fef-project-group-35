@@ -6,6 +6,41 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+/* Keyframes for animations */
+@keyframes scroll {
+  0% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(-100%, 0);
+  }
+}
+
+@keyframes blink {
+  0% {
+	  opacity: 1;
+  }
+
+  50% {
+	  opacity: 0.9;
+  }
+
+  100% {
+	  opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Navigation Bar */
 header {
   position: fixed;
@@ -246,6 +281,7 @@ header {
   width: 100%;
   height: 800px;
   overflow: hidden;
+  animation: blink 2s ease 0s infinite normal none;
 }
 
 .banner-img {
@@ -301,6 +337,8 @@ header {
   color: #000;
   text-align: center;
   padding: 6rem 2rem;
+  animation: fadeIn 1s ease-in-out;
+  animation-delay: 0.4s;
 }
 
 .products-section h1 {
@@ -375,6 +413,8 @@ header {
   background-color: #f8f8f8; 
   border: 1px solid #007bff;
   overflow: hidden;
+  animation: fadeIn 1s ease-in-out;
+  animation-delay: 0.5s;
 }
 
 .infiniti-text {
@@ -399,15 +439,6 @@ header {
   animation-delay: 5s; 
 }
 
-@keyframes scroll {
-  0% {
-      transform: translate(0, 0);
-  }
-  100% {
-      transform: translate(-100%, 0);
-  }
-}
-
 /* ------------------------------------------------------------------------------------------------------------------- */
 
 /* Promo Section */
@@ -415,6 +446,8 @@ header {
   display: flex;
   justify-content: center;
   padding: 6rem 0;
+  animation: fadeIn 1s ease-in-out;
+  animation-delay: 0.6s;
 }
 
 .promo-container {
@@ -472,6 +505,8 @@ header {
   text-align: center;
   padding: 6rem 2rem;
   background-color: #f8f8f8;
+  animation: fadeIn 1s ease-in-out;
+  animation-delay: 0.7s;
 }
 
 .benefits-section h2 {
@@ -523,6 +558,8 @@ header {
   background: #ffffff;
   padding: 6rem 2rem;
   text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  animation-delay: 0.8s;
 }
 
 .contact-section h2 {
@@ -601,6 +638,8 @@ form {
   background-color: black;
   color: white;
   padding: 1.5rem 0;
+  animation: fadeIn 1s ease-in-out;
+  animation-delay: 0.9s;
 }
 
 .footer-container {
@@ -677,3 +716,4 @@ form {
   font-size: 0.9rem;
   color: #bbb;
 }
+
