@@ -59,6 +59,28 @@
         </div>
     </main>
 
+    <div id="payment-modal" class="payment-modal">
+        <div class="payment-modal-content">
+            <span class="close-payment-modal">&times;</span>
+            <h2>Select Payment Method</h2>
+            <form id="payment-form">
+                <div class="payment-method">
+                    <input type="radio" id="credit-card" name="payment-method" value="Credit Card">
+                    <label for="credit-card">Credit Card</label>
+                </div>
+                <div class="payment-method">
+                    <input type="radio" id="paypal" name="payment-method" value="PayPal">
+                    <label for="paypal">PayPal</label>
+                </div>
+                <div class="payment-method">
+                    <input type="radio" id="bank-transfer" name="payment-method" value="Bank Transfer">
+                    <label for="bank-transfer">Bank Transfer</label>
+                </div>
+                <button type="submit" class="btn">Confirm Payment</button>
+            </form>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="footer-container">  
             <div class="footer-logo">
