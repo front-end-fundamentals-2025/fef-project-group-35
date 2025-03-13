@@ -30,11 +30,6 @@ function displayCart() {
 
     cartTotalElement.textContent = `$${total.toFixed(2)}`;
 
-    // Attach event listeners to all "Add to Cart" buttons
-    document.querySelectorAll('.add-to-cart-btn').forEach(button => {
-        button.addEventListener('click', addToCart);
-    });
-
     // Attach delete event listeners
     document.querySelectorAll('.delete-btn').forEach(button => {
         button.addEventListener('click', deleteItem);
@@ -133,17 +128,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     displayCart();
-
-    // Attach event listeners to product links for loader
-    document.querySelectorAll('.products-card a').forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            document.getElementById('loader').style.display = 'block';
-            const href = this.getAttribute('href');
-            setTimeout(() => {
-                window.location.href = href;
-            }, 2000); 
-        });
+   
+    // Attach event listeners to all "Add to Cart" buttons
+    document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+        button.addEventListener('click', addToCart);
     });
 });
 

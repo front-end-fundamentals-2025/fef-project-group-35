@@ -138,6 +138,19 @@ if (gameKey && games[gameKey]) {
     document.getElementById("game-platform").textContent = game.platform;
     document.getElementById("game-release").textContent = game.release;
     document.getElementById("game-developer").textContent = game.developer;
+
+    // Set data attributes for the "Add to Cart" button
+    const addToCartBtn = document.querySelector('.add-to-cart-btn');
+    addToCartBtn.setAttribute('data-name', game.title);
+    addToCartBtn.setAttribute('data-price', game.price.replace('$', ''));
 } else {
     document.querySelector(".product-container").innerHTML = "<h1>Game Not Found</h1>";
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Attach event listener to the "Add to Cart" button
+    const addToCartBtn = document.querySelector('.add-to-cart-btn');
+    if (addToCartBtn) {
+        addToCartBtn.addEventListener('click', addToCart);
+    }
+});
