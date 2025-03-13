@@ -85,6 +85,7 @@ header {
   border: 1px solid #007bff;
   border-radius: 5px;
   color: #007bff;
+  background: #fff;
   font-size: 1.2em;
   font-weight: bold;
   transition: background-color 0.3s ease-in-out;
@@ -296,6 +297,7 @@ body.modal-open {
 }
 
 /* ------------------------------------------------------------------------------------------------------------------- */
+
 /* Payment Modal */
 .payment-modal {
   display: none;
@@ -340,6 +342,82 @@ body.modal-open {
 .payment-method input {
   margin-right: 10px;
 }
+
+.proceed-checkout-btn {
+  width: 100%;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  color: #007bff;
+  background: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.proceed-checkout-btn:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Payment Success Modal  */
+.payment-success-modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.payment-success-modal-content {
+  background-color: #4CAF50;
+  color: white;
+  margin: 15% auto;
+  padding: 4rem;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.close-success-modal {
+  color: #fff;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-success-modal:hover,
+.close-success-modal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Payment Success Message  */
+.payment-success {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4CAF50;
+  color: white;
+  padding: 4rem;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
 /* Cart Popup */
 .cart-window {
   background-color: rgb(250, 250, 250);
