@@ -462,7 +462,7 @@ body.modal-open {
   width: 100%;
   height: 800px;
   overflow: hidden;
-  animation: blink 2s ease 0s infinite normal none;
+  animation: fadeIn 1s ease-in-out, blink 2s ease 1s infinite normal none;
 }
 
 .banner-img {
@@ -722,7 +722,7 @@ body.modal-open {
   max-width: 1600px;
   padding: 10rem 0rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://img.freepik.com/free-vector/planets-outer-space-with-satellites-meteors-illustration_33099-2352.jpg?t=st=1739166168~exp=1739169768~hmac=72a2506a05823ff33299c765ab7d1aaab7c41d7cf950333008754799e3211ce6&w=1380");
+    url("https://imgur.com/cfOSXYK.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 10px;

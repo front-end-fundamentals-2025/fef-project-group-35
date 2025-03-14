@@ -442,7 +442,6 @@ body.modal-open {
   align-items: center;
   margin: 2rem auto;
   animation: fadeIn 1s ease-in-out;
-  animation-delay: 0.2s;
 }
 
 .about-us-section h1 {
