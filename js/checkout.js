@@ -31,49 +31,29 @@ document.addEventListener('DOMContentLoaded', function() {
   // Call the function to render cart items on page load
   renderCheckoutCartItems();
 
-  const checkoutBtn = document.querySelector('.proceed-checkout-btn');
-  const paymentModal = document.getElementById('payment-modal');
-  const closePaymentModal = document.querySelector('.close-payment-modal');
-  const paymentSuccessModal = document.getElementById('payment-success-modal');
-  const closeSuccessModal = document.querySelector('.close-success-modal');
+  const proceedCheckoutBtn = document.getElementById('proceed-checkout-btn');
+  const completePurchaseModal = document.getElementById('complete-purchase-modal');
+  const closeModalBtn = document.querySelector('.close-btn');
+  const closeModalBtnFooter = document.querySelector('.close-modal-btn');
 
-  checkoutBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      paymentModal.style.display = 'block';
+  proceedCheckoutBtn.addEventListener('click', function() {
+      completePurchaseModal.style.display = 'block';
+      setTimeout(function() {
+          completePurchaseModal.style.display = 'none';
+      }, 3000); 
   });
 
-  closePaymentModal.addEventListener('click', () => {
-      paymentModal.style.display = 'none';
+  closeModalBtn.addEventListener('click', function() {
+      completePurchaseModal.style.display = 'none';
   });
 
-  window.addEventListener('click', (e) => {
-      if (e.target === paymentModal) {
-          paymentModal.style.display = 'none';
-      }
+  closeModalBtnFooter.addEventListener('click', function() {
+      completePurchaseModal.style.display = 'none';
   });
 
-  const paymentForm = document.getElementById('payment-form');
-  paymentForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const selectedPaymentMethod = document.querySelector('input[name="payment-method"]:checked');
-      if (selectedPaymentMethod) {
-          paymentModal.style.display = 'none';
-          paymentSuccessModal.style.display = 'block';
-          setTimeout(() => {
-              paymentSuccessModal.style.display = 'none';
-          }, 3000);
-      } else {
-          alert('Please select a payment method.');
-      }
-  });
-
-  closeSuccessModal.addEventListener('click', () => {
-      paymentSuccessModal.style.display = 'none';
-  });
-
-  window.addEventListener('click', (e) => {
-      if (e.target === paymentSuccessModal) {
-          paymentSuccessModal.style.display = 'none';
+  window.addEventListener('click', function(event) {
+      if (event.target == completePurchaseModal) {
+          completePurchaseModal.style.display = 'none';
       }
   });
 });

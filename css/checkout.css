@@ -8,6 +8,11 @@
 
 main {
   min-height: calc(100vh - 6rem - 322px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 5rem;
 }
 
 @keyframes fadeIn {
@@ -436,21 +441,7 @@ body.modal-open {
 
 /* ------------------------------------------------------------------------------------------------------------------- */
 
-/* Styles for the checkout cart items */
-.checkout-container {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 2rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-}
-
-.checkout-container h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
+/* Checkout section */
 #checkout-cart-items {
   display: flex;
   flex-direction: column;
@@ -461,54 +452,94 @@ body.modal-open {
   background-color: #fff;
 }
 
-.cart-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  border-bottom: 1px solid #ddd;
-}
-
-.cart-summary {
-  margin-top: 2rem;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+.checkout-container, .shipping-address, .billing-payment {
   background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 800px;
 }
 
-.cart-summary p {
-  font-size: 1.2rem;
-  margin: 0.5rem 0;
+.checkout-container h2, .shipping-address h2, .billing-payment h2 {
+  margin: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.cart-items, .cart-summary, .form-group, .form-group-row {
+  margin-bottom: 1rem;
 }
 
 .cart-summary .total {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.checkout-btn {
-  display: block;
-  width: 100%;
-  padding: 1rem;
   font-size: 1.2rem;
-  color: #fff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 1rem;
+  font-weight: bold;
+  text-align: center;
 }
 
-.checkout-btn:hover {
+.payment-method {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.icon-container {
+  font-size: 1.2rem;
+  align-items: center;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.form-group-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group-row .form-group {
+  flex: 1;
+  margin-right: 0.75rem; 
+}
+
+.form-group-row .form-group:last-child {
+  margin-right: 0;
+}
+
+.proceed-checkout-btn {
+  width: 100%;
+  max-width: 800px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.proceed-checkout-btn:hover {
   background-color: #0056b3;
 }
 
 @media screen and (max-width: 768px) {
-  .checkout-container {
-    width: 100%;
+  .checkout-container, .shipping-address, .billing-payment {
     padding: 1rem;
-    margin: 0rem auto;
+    margin: 1rem auto;
+    width: 100%;
   }
 
   .cart-item {
@@ -520,11 +551,11 @@ body.modal-open {
     margin-bottom: 0.5rem;
   }
 
-  .cart-summary {
+  .cart-summary, .shipping-address, .billing-information {
     padding: 1rem;
   }
 
-  .checkout-btn {
+  .save-btn, .proceed-checkout-btn {
     padding: 0.75rem;
     font-size: 1rem;
   }
@@ -532,8 +563,8 @@ body.modal-open {
 
 /* ------------------------------------------------------------------------------------------------------------------- */
 
-/* Payment Modal */
-.payment-modal {
+/* Successfully Modal */
+.modal {
   display: none;
   position: fixed;
   z-index: 1000;
@@ -545,156 +576,27 @@ body.modal-open {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.payment-modal-content {
+.modal-content {
   background-color: #fff;
   margin: 15% auto;
-  padding: 20px;
+  padding: 2rem;
   border: 1px solid #888;
   width: 80%;
   max-width: 500px;
+  border-radius: 0.5rem;
   text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-.close-payment-modal {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close-payment-modal:hover,
-.close-payment-modal:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.payment-method {
-  margin: 15px 0;
-}
-
-.payment-method input {
-  margin-right: 10px;
-}
-
-.proceed-checkout-btn {
-  width: 100%;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border: 1px solid #007bff;
-  border-radius: 5px;
-  color: #007bff;
-  background: #fff;
-  font-size: 1.2em;
-  font-weight: bold;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.proceed-checkout-btn:hover {
-  background-color: #007bff;
-  color: white;
-}
-
-/* Payment Success Modal  */
-.payment-success-modal {
-  display: none;
-  position: fixed;
-  z-index: 1001;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.payment-success-modal-content {
-  background-color: #4CAF50;
-  color: white;
-  margin: 15% auto;
-  padding: 4rem;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 500px;
-  text-align: center;
-  border-radius: 5px;
-}
-
-.close-success-modal {
-  color: #fff;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close-success-modal:hover,
-.close-success-modal:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.confirm-btn {
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border: 1px solid #007bff;
-  border-radius: 5px;
-  color: #007bff;
-  background: #fff;
-  font-size: 1.2em;
-  font-weight: bold;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.confirm-btn:hover {
-  background-color: #007bff;
-  color: white;
-}
-
-/* Payment Success Message  */
-.payment-success {
-  display: none;
-  position: fixed;
-  z-index: 1001;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #4CAF50;
-  color: white;
-  padding: 4rem;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 1.2em;
+.success-icon {
+  margin-top: 1rem;
 }
 
 @media screen and (max-width: 768px) {
-  .payment-modal-content {
+  .modal-content {
     width: 90%;
+    margin: 20% auto;
     padding: 1rem;
-  }
-
-  .payment-success-modal-content {
-    width: 90%;
-    padding: 2rem;
-  }
-
-  .close-payment-modal,
-  .close-success-modal {
-    font-size: 1.5rem;
-  }
-
-  .proceed-checkout-btn {
-    padding: 0.5rem;
-    font-size: 1rem;
-  }
-
-  .payment-success {
-    padding: 2rem;
-    font-size: 1rem;
-  }
-
-  .confirm-btn {
-    background: #fff;
   }
 }
 
